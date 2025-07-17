@@ -1,0 +1,10 @@
+const name = "Bogdan";
+console.log(name);
+const age = 2025;
+const getSume = age-25;
+console.log(getSume);
+let user;
+console.log(user);
+user = "Bob";
+user = "John";
+console.log(user);
