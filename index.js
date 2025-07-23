@@ -31,5 +31,5 @@ console.log(typeof total)
 // alert("hello world");
 // confirm("You sure you want to quit");
 
-const promtResult = prompt("subscribe");
-console.log(promtResult)
+// const promtResult = prompt("subscribe");
+// console.log(promtResult)
