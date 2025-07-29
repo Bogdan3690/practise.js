@@ -36,7 +36,7 @@ console.log(typeof total)
 // const promtResult = prompt("subscribe");
 // console.log(promtResult)
 
-const num1 = prompt("enter numbers");
+// const num1 = prompt("enter numbers");
 // const num2 = prompt("enter numbers");
 // const getNumbers = Number(num1) + Number(num2);
 // console.log(getNumbers);
