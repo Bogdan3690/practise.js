@@ -11,10 +11,20 @@ console.log(fruit.indexOf("a"));
 //     includes() — один з найбільш часто використовуваних методів, в більшості випадків замінює indexOf, перевіряє чи входить підрядок в рядок, повертає true або false
 const email = "dblevko@gmail.com"
 console.log(email.includes(""));
-// str.startsWith() та str.endsWith() перевіряють, чи починається і чи закінчується рядок певним підрядком.
+//     str.startsWith() та str.endsWith() перевіряють, чи починається і чи закінчується рядок певним підрядком.
+const password = "Levko2802!"
+console.log(password.startsWith("l"))
 //     trim() — видаляє (“обрізає”) пробіли з початку та кінця рядка.
-//     padStart() і padEnd()доповнює поточний рядок іншим рядком (кілька разів, якщо потрібно), доки отриманий рядок не досягне заданої довжини. 
+// const name = prompt("What is your name");
+// const trimName = name.trim()
+// console.log(`Name ${name.trim()} has ${trimName.length}`)
+
+//     padStart() і padEnd() доповнює поточний рядок іншим рядком (кілька разів, якщо потрібно), доки отриманий рядок не досягне заданої довжини. 
 //         Відступ застосовується з кінця/початку поточного рядка.
+const hours = "3"
+console.log(hours.padStart(2,"0"))
+const message = "Hi"
+console.log(message.padEnd(message.length + 1,"!"))
 
 // practice
 
@@ -36,4 +46,15 @@ console.log(string1.includes(blacklistedWord2));
 
 console.log(string2.includes(blacklistedWord1));
 console.log(normalizeString2.includes(normalizeBlacklistedWord2));
+
+// Напиши скрипт який виведе рядок в форматі:
+// «Гість x y поселяється в g номер q»,
+// підставив замість x y g q значення змінних
+
+const firstName = 'Mango';
+const lastName = 'Lee';
+const room = 716;
+const type = 'VIP';
+const customersMsg = `Гість ${firstName} ${lastName} заселяється в ${type} номер ${room}`;
+console.log(customersMsg)
 
