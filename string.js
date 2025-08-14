@@ -7,7 +7,7 @@ console.log(phrase.toLowerCase());
 console.log(phrase.toUpperCase());
 //     indexOf() — поверне позицію (індекс) на якій знаходиться перший збіг підрядка або -1, якщо нічого не знайдено
 const fruit = "banana";
-console.log(fruit.indexOf("a"));
+console.log(fruit.indexOf("n"));
 //     includes() — один з найбільш часто використовуваних методів, в більшості випадків замінює indexOf, перевіряє чи входить підрядок в рядок, повертає true або false
 const email = "dblevko@gmail.com"
 console.log(email.includes(""));
@@ -25,7 +25,6 @@ const hours = "3"
 console.log(hours.padStart(2,"0"))
 const message = "Hi"
 console.log(message.padEnd(message.length + 1,"!"))
-
 // practice
 
 /*
@@ -48,7 +47,7 @@ console.log(string2.includes(blacklistedWord1));
 console.log(normalizeString2.includes(normalizeBlacklistedWord2));
 
 // Напиши скрипт який виведе рядок в форматі:
-// «Гість x y поселяється в g номер q»,
+// «Гість x y поселяється в g номер q»
 // підставив замість x y g q значення змінних
 
 const firstName = 'Mango';
