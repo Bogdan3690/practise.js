@@ -65,3 +65,19 @@ if(totalPrice > accaunt){
 // }if(sentence === 0){
 //     console.log("0");
 // }
+
+let isOnline = false;
+let isFriend = true;
+let isDnd = true;
+if (isOnline === true){
+    prompt("Enter message")}
+else if (isOnline === false){
+    alert("No online!")}
+if (isFriend === true){
+    prompt("Enter message")}
+else if (isFriend === false){
+    alert("No friend!")}
+if (isDnd === true){
+    prompt("Enter message")}
+else if (isDnd === false){
+    alert("With Dnd on!")}
