@@ -91,3 +91,20 @@ if(totalPrice > accaunt){
 // }else if(balance < payment)
 //     alert(`На рахунку недостатньо коштів для проведення операції!`)
 // alert("Операція завершена");
+
+// let browser = 'Opera'
+
+// switch (browser) {
+//  case 'Edge':
+//   console.log("You've got the Edge!")
+//   break
+//  case 'Chrome':
+//  case 'Firefox':
+//  case 'Safari':
+//  case 'Opera':
+//   console.log('Ми підтримуємо і ці браузери')
+//   break
+//  default:
+//   console.log('Маємо надію, що ця сторінка виглядає добре!')
+//   break
+// }
