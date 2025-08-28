@@ -1,14 +1,14 @@
-let totalPrice;
-const quantity = 8;
-const price = 50;
-const accaunt = 600;
-totalPrice = quantity * price;
+// let totalPrice;
+// const quantity = 8;
+// const price = 50;
+// const accaunt = 600;
+// totalPrice = quantity * price;
 
-if(totalPrice > accaunt){
+// if(totalPrice > accaunt){
     // alert("Not enough money");
-}else{
+// }else{
     // alert("Nice");
-}
+// }
 
 // alert("Have a good day");
 
@@ -93,7 +93,6 @@ if(totalPrice > accaunt){
 // alert("Операція завершена");
 
 // let browser = 'Opera'
-
 // switch (browser) {
 //  case 'Edge':
 //   console.log("You've got the Edge!")
@@ -108,3 +107,84 @@ if(totalPrice > accaunt){
 //   console.log('Маємо надію, що ця сторінка виглядає добре!')
 //   break
 // }
+
+
+//  * Напиши скрипт вибору готеля по кількості зірок.
+//  * 1,2 - 20$,  3,4 - 50$,  5 - 120$
+//  *
+//  * Якщо в змінній stars щось окрім чисел 1-5, виведи рядок
+//  * 'Токої кількості зірок немає'
+
+// let stars = Number(prompt("Enter how many stars"))
+// if (stars === 1 || stars === 2){
+//     alert("20$")
+// }else if (stars === 3 || stars === 4){
+//     alert("50$")
+// }else if (stars === 5){
+//     alert("150$")
+// }else{
+//     alert('Токої кількості зірок немає')
+// }
+
+// let stars = Number(prompt("Enter how many stars"))
+// switch (stars){
+//     case 1:
+//     case 2:
+//     alert("20$")
+//     break
+//     case 3:
+//     case 4:
+//     alert("50$")
+//     break
+//     case 5:
+//     alert("150$")
+//     break
+//     default:
+//         alert('Токої кількості зірок немає')
+// }
+
+//  * Напиши скрипт вибору опції доставки товару.
+//  * Опція зберігається в змінній option: 1 - самовивоз, 2 - кур"єр, 3 - пошта
+//  *
+//  * В змінну message записати повідомлення в залежності від опції.
+//  * - 'Ви зможете забрати товар завтра з 12:00 в нашому офісі'
+//  * - 'Кур"єр доставить замовлення завтра з 9:00 до 18:00'
+//  * - 'Посилка буде відправлена сьогодні'
+//  * - 'Вам передзвонит менеджер'
+//  */
+
+// let option = prompt('опції доставки товару.').toLowerCase().trim()
+// switch(option){
+//     case 'самовивоз':
+//         alert('Ви зможете забрати товар завтра з 12:00 в нашому офісі')
+//         break
+//     case 'кур"єр':
+//         alert('Кур"єр доставить замовлення завтра з 9:00 до 18:00')
+//         break
+//     case 'пошта':
+//         alert('Посилка буде відправлена сьогодні')
+//         break
+//         default:
+//             alert('Вам передзвонит менеджер')
+// }
+
+// Якщо ваше ім’я містить більше 4 букв і прізвище більше 5, то виведіть на екран число,яке дорівнює сумі букв імені і прізвища. Якщо умова не виконується - вивести “УПС”. Наприклад: “Віктор Сташко” Віктор — 6 літер, Сташко — 6 літер. Виводимо 12. Використовувати вбудований метод length.
+// let name = prompt("Name?").trim()
+// let secondName = prompt("Second Name?").trim()
+// if(name.length > 4 && secondName.length > 5){
+//     alert(name.length + secondName.length);
+// }else{
+//     alert('Oops')
+// }
+
+const a = 5;
+const b = 15;
+console.log(a);//5
+
+if(true){
+    const b = 10;
+    console.log(b);//10
+    console.log(a);//5
+}
+
+console.log(b);//15
