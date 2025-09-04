@@ -33,3 +33,22 @@
 //     break
 // }
 // }
+
+/*
+ * Напиши скрипт який підраховує загальну суму зп працівників.
+ * Кількість робітників зберігається в змінній employees.
+ * ЗП кожного працівника це випадкове число від 500 до 5000
+ * Записати суму в змінну totalSalary і вивести в консоль
+ */
+
+// 1 make consts
+let employees = 10
+let totalSalary = 0
+// 2 make 1 for{} for every employees
+for(let i = 1; i <= 10; i += 1){
+    // 3 make salary for every employees
+    let salary = Math.round(Math.random()*(5000-500)+500)
+// 4 add salary to total
+    totalSalary += salary
+}
+console.log(totalSalary)
