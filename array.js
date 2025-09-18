@@ -125,3 +125,84 @@
 // console.log(dobleArray)
 
 // Метод splice()
+
+// Sep 18
+
+/*
+ * Працюємо з колекцією карток в trello
+ * - Метод splice()
+ * - Видалити
+ * - Додати
+ * - Оновити
+ */
+
+const cards = [
+    'Карточка-1',
+    'Карточка-2',
+    'Карточка-3',
+    'Карточка-4',
+    'Карточка-5',
+  ]; 
+  console.table(cards);  
+
+  /*
+   * Видалення (по індексу), метод indexOf()
+   */
+//   const cardToRemove = 'Карточка-3';
+//   let index = cards.indexOf(cardToRemove)
+//   console.log(index)
+//   let splice = cards.splice(index, 1)
+//   console.log(splice)
+//   console.log(cards)
+/*
+
+   * Додавання (по індексу)
+   */
+// const cardToInsert = 'Карточка-6';
+// let indexToInsert = cards.length
+// let push = cards.splice(indexToInsert, 0, cardToInsert)
+// console.log(cards)
+
+/*
+   * Оновлення (по індексу)
+   */
+//   const cardToUpdate = 'Карточка-4';
+//   let index = cards.indexOf(cardToUpdate)
+//   console.log(index)
+//   let update = cards.splice(index, 2, 'new card', 'second new card')
+//   console.log(cards)
+
+
+/*
+ * Напиши скрипт який замінює регістр кожного символа в рядку на протилежний.
+ * Наприклад, якщо рядок «JavaScript», то на виході повинно бути «jAVAsCRIPT».
+ */
+
+// const strs = 'JavaScript';
+
+// let split = strs.split('')
+// console.log(split)
+// let reversStr = '';
+
+// for(let i = 0; i < split.length; i++){
+//     if(split[i] === split[i].toLowerCase()){
+//        reversStr += split[i].toUpperCase()
+//     }else{
+//         reversStr += split[i].toLowerCase()
+//     }
+// }
+
+
+// for (const letter of strs) {
+//     if(letter === letter.toLowerCase()){
+//        reversStr += letter.toUpperCase()
+//     }else{
+//         reversStr += letter.toLowerCase()
+//     }
+// }
+
+// for (const letter of strs) {
+//     reversStr += letter === letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase()
+// }
+
+// console.log(reversStr);
