@@ -1,5 +1,5 @@
 function getSume(num1, num2) {
-    console.log(num1 + num2)
+    // console.log(num1 + num2)
 }
 
 getSume(15, 15)
@@ -20,7 +20,7 @@ function createStr(names) {
 
 let newStr = createStr(['Danil', 'Lesha'])
 createStr(['berry', 'banana', 'strawberry'])
-console.log(newStr)
+// console.log(newStr)
 /*
 
  * Робимо slug в URL з назви стратті (приклад на dev.to)
@@ -38,7 +38,7 @@ function createSlug(str) {
 }
 let newString = 'Top 10 benefits of React framework'
 let resultSlug = createSlug(newString)
-console.log(resultSlug)
+// console.log(resultSlug)
 
 // Методи split() і join()
 
@@ -48,9 +48,10 @@ console.log(resultSlug)
 
 // Методи indexOf() і includes()
 // +
+
 // Методи push(), pop(), shift(), unshift()
 
-let fruits = ['banana', 'strawberry', 'blackberry', 'pineapple', 'watermelon']
+// let fruits = ['banana', 'strawberry', 'blackberry', 'pineapple', 'watermelon']
 // fruit.shift()
 
 // Метод slice()
@@ -64,11 +65,11 @@ let fruits = ['banana', 'strawberry', 'blackberry', 'pineapple', 'watermelon']
 // let dobleArray = colors.concat(fruits,names)
 // console.log(dobleArray)
 
-function createCon(colors, plusFruits) {
-    return colors.concat(plusFruits)
-}
-let newCon = createCon([15, 10, 20], [''])
-console.log(newCon)
+// function createCon(colors, plusFruits) {
+//     return colors.concat(plusFruits)
+// }
+// let newCon = createCon([15, 10, 20], [''])
+// console.log(newCon)
 
 
 // Метод splice()
@@ -101,8 +102,12 @@ const cards = [
 //   let splice = cards.splice(index, 1)
 //   console.log(splice)
 //   console.log(cards)
-/*
+// function deleteCard(cardToRemove, cards) {
+//     return cards
+// }
+//   let splice = cards.splice(index, 1)
 
+/*
    * Додавання (по індексу)
    */
 // const cardToInsert = 'Карточка-6';
@@ -113,12 +118,19 @@ const cards = [
 /*
    * Оновлення (по індексу)
    */
-//   const cardToUpdate = 'Карточка-4';
+  const cardToUpdate = 'Карточка-4';
 //   let index = cards.indexOf(cardToUpdate)
 //   console.log(index)
 //   let update = cards.splice(index, 2, 'new card', 'second new card')
 //   console.log(cards)
 
+const updateCard = function(cardToUpdate, cards){ 
+  let index = cards.indexOf(cardToUpdate)
+  let update = cards.splice(index, 2, '', 'card')
+
+  return cards
+}
+console.log(updateCard(cardToUpdate, cards))
 
 /*
  * Напиши скрипт який замінює регістр кожного символа в рядку на протилежний.
@@ -153,3 +165,31 @@ const cards = [
 // }
 
 // console.log(reversStr);
+
+const updateCard = function(cardToUpdate, cards){ 
+  let index = cards.indexOf(cardToUpdate)
+  let update = cards.splice(index, 2, '', 'card')
+
+  return cards
+}
+console.log(updateCard(cardToUpdate, cards)) 
+
+
+
+let chest = ['chest']
+let item = 'boots'
+const addTreasure = function(chest, item) {
+  let items = ['меч', 'щит', 'зілля']
+  let newItems = addTreasure(items)
+222
+  return add
+}
+console.log(addTreasure(chest, item))
+
+
+// function createSlug(str) {
+//     return str.toLowerCase().split(' ').join('-')
+// }
+// let newString = 'Top 10 benefits of React framework'
+// let resultSlug = createSlug(newString)
+// console.log(resultSlug)
