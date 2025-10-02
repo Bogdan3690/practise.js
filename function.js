@@ -303,3 +303,61 @@ let myAverageScore = function(array){
 // console.log(myAverageScore([45, 63, 85, 70]));
 // console.log(myAverageScore([77, 82, 60, 58]));
 // console.log(myAverageScore([93, 99, 93, 96]));
+
+
+// приклад, що буде в консолі?
+const number = 50;
+const add = function(num) {
+  const number = 10;
+  const innerNum = 5;
+  return num + number + innerNum;
+};
+
+// console.log(number); 
+// console.log(add(20)); 
+// console.log(innerNum);
+
+
+/*
+ * Напиши функцію calculateTotalPrice(items)
+ * яка приймає масив цін (чисел) та повертає їх суму
+ */
+
+const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+
+function calculatePrice(items){
+  let total = 0
+  for (let i = 0; i < items.length; i++) {
+    total = total + items[i] 
+  }
+    return total
+}
+// const r1 = calculateTotalPrice([1, 2, 3]);
+
+// console.log(`Загальна сума покупок ${r1}`); // 6
+// console.log(calculatePrice([5, 10, 15, 20])); // 50
+// console.log(calculatePrice([100, 200, 300])); // 600
+// console.log(calculateTotalPrice(cart));
+
+/*
+ Напиши функцію filterNumbers(array [, number1, ...]) яка:
+ - першим аргументом приймає масив чисел
+ - після 1-го аргумента можуть бути інші аргументи, які будуть числами.
+ - Функція повинна повернути новий масив, 
+в якому будут тільки ті аргументи, починаючи з другого,
+для яких є аналог в оригінальном масиві.
+*/
+
+  console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8)); // [2, 3]
+  console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15)); // [30, 15]
+//   console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64)); // [200]
+
+function filterNumbers(array, ...arg){
+  let total = []
+  for (let i = 0; i < array.length; i++) {
+    if (arg.includes(array[i])){
+    total.push(array[i])
+    }
+  }
+  return total
+}
