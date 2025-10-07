@@ -348,8 +348,8 @@ function calculatePrice(items){
 для яких є аналог в оригінальном масиві.
 */
 
-  console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8)); // [2, 3]
-  console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15)); // [30, 15]
+  // console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8)); // [2, 3]
+  // console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15)); // [30, 15]
 //   console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64)); // [200]
 
 function filterNumbers(array, ...arg){
