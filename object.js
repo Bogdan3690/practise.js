@@ -83,5 +83,60 @@ const shirt = {
     }
 }
 shirt.changeLabel('Adidas')
-console.log(shirt.checkSizes('L'))
-console.log(shirt)
+// console.log(shirt.checkSizes('L'))
+// console.log(shirt)
+
+// iteration object, 14
+
+// let totalFeedback = 0;
+
+// const keys = Object.keys(feedback); //['good', 'neutral', 'bad']
+
+// for (const key of keys) {
+//   console.log(key); //'good', 'neutral', 'bad'
+//   totalFeedback += feedback[key];
+// }
+
+
+const feedback = {
+  good: 5,
+  neutral: 10,
+  bad: 3,
+};
+
+const values = Object.values(feedback)
+console.log(values)
+
+let totalFeedback = 0;
+
+for (const value of values) {
+    totalFeedback += value
+
+// console.log(value)
+}
+
+// console.log(totalFeedback);
+
+const entries = Object.entries(feedback)
+// console.log(entries)
+
+/*
+ * Работа с колекцією (масивом об"ектів)
+ */
+const friends = [
+    { name: 'Mango', online: false },
+    { name: 'Kiwi', online: true },
+    { name: 'Poly', online: false },
+    { name: 'Ajax', online: false },
+];
+    function findFriendByName(nameToFind, allFriends){
+        for (const friend of allFriends) {
+            if (friend.name === nameToFind) {
+                console.log('friend is finded')
+                break
+            } else {
+                console.log('friend is not finded')
+            }
+}
+    }
+    findFriendByName('Mango', friends)
