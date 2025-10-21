@@ -129,8 +129,8 @@ const friends = [
   { name: "Ajax", online: false },
 ];
 function findFriendByName(nameToFind, allFriends) {
-  for (const friend of allFriends) {
-    if (friend.name === nameToFind) {
+  for (const {name} of allFriends) {
+    if (name === nameToFind) {
       console.log("friend is finded");
       break;
     } else {
@@ -138,7 +138,7 @@ function findFriendByName(nameToFind, allFriends) {
     }
   }
 }
-// findFriendByName('Mango', friends)
+findFriendByName('Mango', friends)
 
 // oct 16
 
@@ -204,7 +204,7 @@ const result = {
   ...objB,
   z: 15,
 };
-console.log(result); // {// x: 1, // y: 3, // z: 15// }
+// console.log(result); // {// x: 1, // y: 3, // z: 15// }
 
 // Задачка поєднати об,єкти
 const defaultSettings = {
@@ -225,4 +225,101 @@ const finalSettings = {
   ...overrideSettings,
   ...defaultSettings,
 };
-console.log(finalSettings);
+// console.log(finalSettings);
+
+// oct 21
+
+// Об’єкт car
+const car = {
+  make: 'Toyota',
+  model: 'Camry',
+  year: 2020,
+  features: ['power windows', 'rear camera', 'navigation'],
+  safety: {
+    airbags: true,
+    antilock_brakes: true,
+    stability_control: true
+  }
+}
+const {make, model, year, features, safety:{airbags}} = car
+console.log(make, model, year, features, airbags);
+
+// Об’єкт user
+const user = {
+  name: 'John',
+  age: 30,
+  email: 'john@example.com'
+}
+
+const {name: userName, age: userAge, email} = user
+console.log(userName, userAge, email);
+
+// Об’єкт movie
+const movie = {
+  title: 'The Shawshank Redemption',
+  director: {
+    name: 'Frank Darabont',
+    nationality: 'American'
+  },
+  actors: ['Tim Robbins', 'Morgan Freeman'],
+  release_year: 1994,
+  ratings: {
+    imdb: 9.3,
+    rotten_tomatoes: 90
+  }
+}
+
+const {title, release_year, director, director:{nationality}, actors, ratings} = movie
+console.log(title, release_year, director, nationality, actors, ratings);
+
+// Об’єкт books
+const books = {
+  count: 3,
+  list: [
+    {
+      title: 'The Great Gatsby',
+      author: 'F. Scott Fitzgerald',
+      year: 1925
+    },
+    {
+      title: 'To Kill a Mockingbird',
+      author: 'Harper Lee',
+      year: 1960
+    },
+    {
+      title: '1984',
+      author: 'George Orwell',
+      year: 1949
+    }
+  ]
+}
+
+const {count} = books
+console.log(count)
+
+// Дано масив об’єктів
+const newFriends = [
+  { name: "Mango", online: false },
+  { name: "Kiwi", online: true },
+  { name: "Poly", online: false },
+  { name: "Ajax", online: false },
+];
+
+const getAllNames = function(arr){
+  let arrayAllFriends = []
+  for (const friend of arr) {
+    let friendName = friend.name
+    console.log(friendName);
+    arrayAllFriends.push(friendName)
+  }
+  return arrayAllFriends
+}
+
+// Написати функцію яка буде повертати масив всіх імен друзів
+console.log(getAllNames(newFriends));
+
+// Написати функ,яка буде повертати масив імен друзів які онлайн
+// console.log(getOnlineFriends(friends));
+
+// Написати функцію яка буде повертати масив імен друзів які офлайн
+// console.log(getOfflineFriends(friends));
