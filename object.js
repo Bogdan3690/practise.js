@@ -241,8 +241,12 @@ const car = {
     stability_control: true
   }
 }
-const {make, model, year, features, safety:{airbags}} = car
-console.log(make, model, year, features, airbags);
+const {make, model, year, safety:{airbags}, features:[, , navigation]} = car
+// console.log(make, model, year, navigation, airbags);
+
+// const [pw, rc, navig] = features
+// console.log(pw, rc, navig);
+
 
 // Об’єкт user
 const user = {
@@ -252,7 +256,7 @@ const user = {
 }
 
 const {name: userName, age: userAge, email} = user
-console.log(userName, userAge, email);
+// console.log(userName, userAge, email);
 
 // Об’єкт movie
 const movie = {
@@ -269,8 +273,12 @@ const movie = {
   }
 }
 
-const {title, release_year, director, director:{nationality}, actors, ratings} = movie
-console.log(title, release_year, director, nationality, actors, ratings);
+// const {title, release_year, director, director:{nationality}, actors, ratings} = movie
+// console.log(title, release_year, director, nationality, actors, ratings);
+
+// const [, Morgan] = actors
+// console.log(Morgan);
+
 
 // Об’єкт books
 const books = {
@@ -297,6 +305,11 @@ const books = {
 const {count} = books
 console.log(count)
 
+const [{title}, book2, book3] = books.list
+// console.log(title1, book2);
+// const {title} = book1
+console.log(title);
+
 // Дано масив об’єктів
 const newFriends = [
   { name: "Mango", online: false },
@@ -305,6 +318,7 @@ const newFriends = [
   { name: "Ajax", online: false },
 ];
 
+// Написати функцію яка буде повертати масив всіх імен друзів
 const getAllNames = function(arr){
   let arrayAllFriends = []
   for (const friend of arr) {
@@ -314,12 +328,19 @@ const getAllNames = function(arr){
   }
   return arrayAllFriends
 }
-
-// Написати функцію яка буде повертати масив всіх імен друзів
 console.log(getAllNames(newFriends));
 
 // Написати функ,яка буде повертати масив імен друзів які онлайн
-// console.log(getOnlineFriends(friends));
+const getOnlineFriends = function(arr){
+  let arrayAllFriendsOnline = []
+  for (const {name, online} of arr) {
+    if(online){
+      arrayAllFriendsOnline.push(name)
+    }
+  }
+  return arrayAllFriendsOnline
+}
+console.log(getOnlineFriends(newFriends));
 
 // Написати функцію яка буде повертати масив імен друзів які офлайн
 // console.log(getOfflineFriends(friends));
