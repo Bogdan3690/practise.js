@@ -67,3 +67,39 @@ console.log(isAllPlayersOnline);
 // перевірити чи є хоча б один гравецт не онлайн
 const isOneGoodPlayers = players.some(player => player.timePlayed >= 470)
 console.log(isOneGoodPlayers);
+
+// 2 lesson
+
+const scores = [27, 2, 41, 4, 7, 3, 75];
+console.log(scores.toSorted());
+console.log(scores.toSorted((a, b) => a - b)); // smaller
+console.log(scores.toSorted((a, b) => b - a)); // bigger
+
+const students = ["Віка", "Андрій", "Олег", "Юля", "Борис", "Катя"];
+console.log(students.toSorted())
+console.log(students.toSorted((a, b) => a.localeCompare(b)))
+console.log(students.toSorted((a, b) => b.localeCompare(a)))
+
+
+const letters = ["b", "B", "a", "A", "c", "C"];
+console.log(letters.toSorted());
+console.log(letters.toSorted((a, b) => a.localeCompare(b)))
+
+
+console.log(players.toSorted((player1, player2) => player1.timePlayed - player2.timePlayed).map(player => player.timePlayed))
+console.log(players.toSorted((player1, player2) => player1.name.localeCompare(player2.name)).map(player => player.name))
+
+const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
+  return previousValue + number;
+}, 0);
+
+let totalTimePlayed = players.reduce((acc, item) => {
+  console.log(item.timePlayed);
+  return acc + item.timePlayed
+},0)
+console.log(totalTimePlayed);
+
+let totalScores = scores.reduce((acc, item) => {
+  return acc + item
+})
+console.log(totalScores);
