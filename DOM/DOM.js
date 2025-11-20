@@ -9,3 +9,6 @@ console.log(imgElement.width)
 
 const imgElements = document.querySelectorAll('.image')
 console.log(imgElements)
+
+const listElement = document.querySelector('.site-nav')
+console.log(listElement);
