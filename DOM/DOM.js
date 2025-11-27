@@ -20,7 +20,7 @@
 // firstItem.style.backgroundColor = 'yellow'
 
 
-
+// create with createElement
 const item = document.createElement('li')
 item.classList.add('nav-item')
 const link = document.createElement('a')
@@ -37,6 +37,7 @@ const array = [
     'Blog',
     'Contacts'
 ]
+
 let itemsArr = []
 for (const item of array) {
     const navItem = document.createElement('li')
@@ -47,4 +48,40 @@ for (const item of array) {
 }
     list.append(...itemsArr);
     console.log(itemsArr);
-    
+
+
+// create with tagString
+const list2 = document.querySelector('.list2')
+const markup = array.map(item => `<li class='item'> ${item} </li>`).join('')
+list2.innerHTML = markup
+// console.log(list2.innerHTML);
+
+
+// Створити та додати колекцію кнопок з динамічними даними з масиву об’єктів. 
+// використати метод createElement
+
+const colorPickerOptions = [
+    { label: 'red', color: '#F44336' },
+    { label: 'green', color: '#4CAF50' },
+    { label: 'blue', color: '#2196F3' },
+    { label: 'grey', color: '#607D8B' },
+    { label: 'pink', color: '#E91E63' },
+    { label: 'indigo', color: '#3F51B5' },
+  ];
+
+const colorPickerContainer = document.querySelector('.js-color-picker');
+const buttonsMarkup = colorPickerOptions
+.map(item => `<button style='background-color: ${item.color};' type="button">${item.label}</button>`)
+.join('')
+colorPickerContainer.insertAdjacentHTML('beforeend', buttonsMarkup)
+// console.log(buttonsMarkup);
+
+//atributes
+
+const imgElement = document.querySelector('.image')
+// do not use
+imgElement.getAttribute('alt')
+imgElement.setAttribute('alt', 'New alt')
+//use
+console.log(imgElement.hasAttribute('name'));
+console.log(imgElement.removeAttribute('alt'));
