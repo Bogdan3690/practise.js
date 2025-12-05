@@ -13,3 +13,14 @@ btn2.addEventListener('click', onChangeButtonClick)
 function onChangeButtonClick(){
     h2.classList.add('title')
 }
+
+// 5 dec
+
+const inputEl = document.querySelector('.js-input')
+const textEl = document.querySelector('.js-input-text')
+inputEl.addEventListener('input', onInputChange)
+function onInputChange(ev){
+    let value = ev.target.value
+    console.log(value);
+    textEl.textContent = value
+}
