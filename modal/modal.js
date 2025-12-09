@@ -25,3 +25,7 @@ function onBackDropClick(even){
     console.log(even.target);
     console.log(even.currentTarget);
 }
+console.log(openBtn.dataset);
+console.log(openBtn.dataset.action);
+openBtn.style.color=openBtn.dataset.color
+
